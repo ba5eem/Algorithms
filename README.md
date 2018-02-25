@@ -203,7 +203,7 @@ const isSelfDividingNumber = (num) => {
         }); // true
 }
 
-function selfDividingNumbers(left, right) {
+const selfDividingNumbers = (left, right) => {
     //console.log(new Array(right - left + 1).fill(0));
     //creates the array => check each number by selfDividing
     return new Array(right - left + 1)
