@@ -162,7 +162,7 @@ console.log(reverseBits(32, 43261596)); // 964176192
 
 ## Rotate String - (easy):
 ```js
-function rotateString(A, B) {
+const rotateString = (A, B) => {
   let count = 0;
   let arrA = A.split('');
   let arrB = B.split('');
