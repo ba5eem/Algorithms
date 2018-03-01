@@ -125,7 +125,7 @@ console.log(hammingWeight(10));
 
 ## Reverse Bits - (easy):
 ```js
-function reverseBits(n) {
+const reverseBits = (n) => {
   let reversed = 0;
   let last;
   for(let i = 0; i < 32; i++){
