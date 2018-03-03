@@ -143,7 +143,7 @@ console.log(reverseBits(43261596));
 ## Reverse Bits - with Map:
 
 ```js
-function reverseBits(bits,n) {
+const reverseBits = (bits,n) => {
   let reversed = 0;
   let last;
   new Array(bits).fill(0).map(() => {
