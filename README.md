@@ -89,7 +89,7 @@ console.log(hammingDistance(1,4));
 ## Hamming Weight - (easy):
 
 ```js
-function hammingWeight(n) {
+const hammingWeight = (n) => {
     let str = (n >>> 0).toString(2)
       console.log(str); //1010
     let arr = str.split('');
