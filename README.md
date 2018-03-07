@@ -187,7 +187,7 @@ console.log(rotateString(a,b))
 ## Self Dividing Number - (medium):
 
 ```js
-function isSelfDividingNumber(num) {
+const isSelfDividingNumber = (num) => {
     return num.toString() // 66
         .split('') // [ '6', '6' ]
         .map(Number) // [ 6, 6 ]
