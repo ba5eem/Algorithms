@@ -1,15 +1,20 @@
-
-
-function reverseBits(n) {
-  let reversed = 0;
-  let last;
-  for(var i = 0; i < 32; i++){
-    last = n & 1;
-    n >>= 1;
-    reversed <<=1;
-    reversed += last
+function rotateString(A, B) {
+  let count = 0;
+  let arrA = A.split('');
+  let arrB = B.split('');
+  for(let i = 0; i < arrA.length; i++){
+    count +=1;
+    let first = arrA.shift();
+    arrA.splice(arrA.length,1, first);
+    if(arrA.join('') === arrB.join('')){
+     return true;
+    }
+    else if(count === arrA.length){
+     return false
+    }
   }
-  return reversed >>> 0;
-};
+}
 
-console.log(reverseBits(43261596));
+let a = 'abcde';
+let b = 'cdeab';
+console.log(rotateString(a,b))
