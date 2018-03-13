@@ -1,15 +1,15 @@
-function hammingWeight(n) {
-    let str = (n >>> 0).toString(2)
-    console.log(str); //1010
-    let arr = str.split('');
-    console.log(arr); //[ '1', '0', '1', '0' ]
-    let num = 0;
-    for(var i = 0; i < arr.length; i++){
-      if(arr[i] === '0'){
-        num ++;
-      }
-    }
-    return arr.length - num;
+
+
+function reverseBits(n) {
+  let reversed = 0;
+  let last;
+  for(var i = 0; i < 32; i++){
+    last = n & 1;
+    n >>= 1;
+    reversed <<=1;
+    reversed += last
+  }
+  return reversed >>> 0;
 };
 
-console.log(hammingWeight(10));
+console.log(reverseBits(43261596));
