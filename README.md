@@ -29,9 +29,9 @@ factorialize(5);
 
 ```js
 function palindrome(str) {
-  var removeEmptyChar = /[\W_]/g;
-  var lowCaseStr = str.toLowerCase().replace(removeEmptyChar, '');
-  var reverseStr = lowCaseStr.split('').reverse().join(''); 
+  let removeEmptyChar = /[\W_]/g;
+  let lowCaseStr = str.toLowerCase().replace(removeEmptyChar, '');
+  let reverseStr = lowCaseStr.split('').reverse().join(''); 
   return reverseStr === lowCaseStr;
 }
 palindrome("racecar");
@@ -41,9 +41,9 @@ palindrome("racecar");
 
 ```js
 function findLongestWord(str) {
-    var arr = str.split(' ');
-  var n = 0;
-  for(var i = 0; i < arr.length; i++){
+  let arr = str.split(' ');
+  let n = 0;
+  for(let i = 0; i < arr.length; i++){
     if(n < arr[i].length){
       n = arr[i].length;
     } 
@@ -70,9 +70,9 @@ console.log(result);
 ```js
 function hammingWeight(n) {
     let str = (n >>> 0).toString(2)
-    console.log(str); //1010
+      console.log(str); //1010
     let arr = str.split('');
-    console.log(arr); //[ '1', '0', '1', '0' ]
+      console.log(arr); //[ '1', '0', '1', '0' ]
     let num = 0;
     for(var i = 0; i < arr.length; i++){
       if(arr[i] === '0'){
