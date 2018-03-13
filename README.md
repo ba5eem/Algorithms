@@ -52,3 +52,15 @@ function findLongestWord(str) {
 }
 findLongestWord("The quick brown fox jumped over the lazy dog");
 ```
+
+## Hamming Distance
+
+```js
+function hammingDistance (x, y) {
+  let arr = (x ^ y).toString(2).split(''); //["1", "0", "1"]
+  return arr.filter(elem => elem === "1").length; //2
+};
+
+let result = hammingDistance(1,4);
+console.log(result);
+```
