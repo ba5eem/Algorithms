@@ -1,12 +1,14 @@
-function arrayPairSum(nums) {
-  let sum = 0;
-  let i = nums.length - 1;
-  nums.sort((a,b) => a-b)
-  while( i >= 0 ){
-    sum += Math.min(nums[i], nums[i-1]);
-    i = i - 2;
-  }
-  return sum;
+function reverseWords(s) {
+    let reversedWordArr = [];
+    let x = s.split(' ');
+    for(let i = 0; i < x.length; i++){
+      let temp = [];
+      temp.push(x[i].split('').reverse().join(''))
+      reversedWordArr.push(temp[0])
+      temp.pop();
+    }
+
+return reversedWordArr.join(' ');
 };
 
-console.log(arrayPairSum([1,2,3,4]))
+console.log(reverseWords("Let's take LeetCode contest"))
