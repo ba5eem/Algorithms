@@ -1,20 +1,33 @@
-function rotateString(A, B) {
-  let count = 0;
-  let arrA = A.split('');
-  let arrB = B.split('');
-  for(let i = 0; i < arrA.length; i++){
-    count +=1;
-    let first = arrA.shift();
-    arrA.splice(arrA.length,1, first);
-    if(arrA.join('') === arrB.join('')){
-     return true;
-    }
-    else if(count === arrA.length){
-     return false
-    }
-  }
+function isSelfDividingNumber(num) {
+    return num.toString() // 66
+        .split('') // [ '6', '6' ]
+        .map(Number) // [ 6, 6 ]
+        .map((digit) => {
+          //console.log("digit: ", digit); // 1st line 6 / 2nd line 6
+          //console.log("num: ", num); // 1st line 66 / 2nd line 66
+          return digit !== 0 && num % digit === 0;
+        }) //. [ true, true ]
+        .reduce((acc, val) => {
+          //console.log("acc: ", acc); // true
+          //console.log("val: ", val); // true
+          return acc && val;
+        }); // true
 }
 
-let a = 'abcde';
-let b = 'cdeab';
-console.log(rotateString(a,b))
+function selfDividingNumbers(left, right) {
+    //console.log(new Array(right - left + 1).fill(0));
+    //creates the array => check each number by selfDividing
+    return new Array(right - left + 1)
+        .fill(0)
+        .map((val, index) => {
+          //console.log(left+index);
+          return left + index;
+        })
+        .filter((val) => {
+          //console.log(val);
+          return isSelfDividingNumber(val)
+        });
+};
+
+let x = selfDividingNumbers(1,22);
+console.log(x);

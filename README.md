@@ -1,7 +1,7 @@
 ## Algorithms
 Code Examples for Algorithms
 
-## Reverse a String
+## Reverse a String - (easy):
 
 ```js
 function reverseString(str) {
@@ -10,7 +10,7 @@ function reverseString(str) {
 reverseString("hello");
 ```
 
-## Factorialize a Number
+## Factorialize a Number - (easy):
 
 ```js
 function factorialize(num) {
@@ -25,7 +25,7 @@ function factorialize(num) {
 factorialize(5);
 ```
 
-## Check for Palindromes
+## Check for Palindromes - (easy):
 
 ```js
 function palindrome(str) {
@@ -37,7 +37,7 @@ function palindrome(str) {
 palindrome("racecar");
 ```
 
-## Find the Longest Word in a String
+## Find the Longest Word in a String - (easy):
 
 ```js
 function findLongestWord(str) {
@@ -53,7 +53,7 @@ function findLongestWord(str) {
 findLongestWord("The quick brown fox jumped over the lazy dog");
 ```
 
-## Hamming Distance:
+## Hamming Distance - (easy):
 
 ```js
 function hammingDistance (x, y) {
@@ -65,7 +65,7 @@ let result = hammingDistance(1,4);
 console.log(result);
 ```
 
-## Hamming Weight:
+## Hamming Weight - (easy):
 
 ```js
 function hammingWeight(n) {
@@ -85,7 +85,7 @@ function hammingWeight(n) {
 console.log(hammingWeight(10));
 ```
 
-## Reverse Bits:
+## Reverse Bits - (easy):
 ```js
 function reverseBits(n) {
   let reversed = 0;
@@ -102,7 +102,7 @@ function reverseBits(n) {
 console.log(reverseBits(43261596));
 ```
 
-## Rotate String:
+## Rotate String - (easy):
 ```js
 function rotateString(A, B) {
   let count = 0;
@@ -124,4 +124,42 @@ function rotateString(A, B) {
 let a = 'abcde';
 let b = 'cdeab';
 console.log(rotateString(a,b))
+```
+
+## Self Dividing Number - (medium):
+
+```js
+function isSelfDividingNumber(num) {
+    return num.toString() // 66
+        .split('') // [ '6', '6' ]
+        .map(Number) // [ 6, 6 ]
+        .map((digit) => {
+          //console.log("digit: ", digit); // 1st line 6 / 2nd line 6
+          //console.log("num: ", num); // 1st line 66 / 2nd line 66
+          return digit !== 0 && num % digit === 0;
+        }) //. [ true, true ]
+        .reduce((acc, val) => {
+          //console.log("acc: ", acc); // true
+          //console.log("val: ", val); // true
+          return acc && val;
+        }); // true
+}
+
+function selfDividingNumbers(left, right) {
+    //console.log(new Array(right - left + 1).fill(0));
+    //creates the array => check each number by selfDividing
+    return new Array(right - left + 1)
+        .fill(0)
+        .map((val, index) => {
+          //console.log(left+index);
+          return left + index;
+        })
+        .filter((val) => {
+          //console.log(val);
+          return isSelfDividingNumber(val)
+        });
+};
+
+let x = selfDividingNumbers(1,22);
+console.log(x);
 ```
