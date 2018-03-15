@@ -53,6 +53,26 @@ function findLongestWord(str) {
 findLongestWord("The quick brown fox jumped over the lazy dog");
 ```
 
+## Find and Return longest Word with Map:
+
+```jsfunction findLongestWord(str) {
+  let n = 0;
+  let arr = str
+    .split(' ')
+    .map((word, i) => {
+      (n < word.length) && (n = word.length);
+      return word;
+    })
+    .map(word => {
+      return (word.length === n) && word;
+    });
+  console.log(arr);
+  return arr;
+}
+findLongestWord("The quick brown fox jumped over the lazy dog");
+```
+
+
 ## Hamming Distance - (easy):
 
 ```js
