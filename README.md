@@ -225,3 +225,23 @@ function fizzBuzz(n) {
 
 console.log(fizzBuzz(15))
 ```
+
+## Smallest Divisible Number - (easy):
+
+```js
+function smallestDivisble(n){
+  for(let i = 1; i <= 100000000000; i++){
+    let found = true;
+    for(let j = 1; j<= n; j++){
+      if(i % j !==0){
+        found = false;
+        break;
+      }
+    }
+    if(found){
+      return i;
+    }
+  }
+}
+console.log(smallestDivisble(10));
+```
