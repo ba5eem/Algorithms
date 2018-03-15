@@ -102,6 +102,26 @@ function reverseBits(n) {
 console.log(reverseBits(43261596));
 ```
 
+## Reverse Bits - with Map:
+
+```js
+function reverseBits(bits,n) {
+  let reversed = 0;
+  let last;
+  new Array(bits).fill(0).map(() => {
+    last = n & 1;
+    n >>= 1;
+    reversed <<=1;
+    reversed += last;
+  })
+  return reversed >>> 0;
+}
+
+console.log(reverseBits(32, 964176192)); // 43261596
+console.log(reverseBits(32, 43261596)); // 964176192
+```
+
+
 ## Rotate String - (easy):
 ```js
 function rotateString(A, B) {
