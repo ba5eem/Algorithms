@@ -55,7 +55,8 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 
 ## Find and Return longest Word with Map:
 
-```jsfunction findLongestWord(str) {
+```js
+function findLongestWord(str) {
   let n = 0;
   let arr = str
     .split(' ')
