@@ -56,13 +56,13 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 ## Hamming Distance - (easy):
 
 ```js
-function hammingDistance (x, y) {
-  let arr = (x ^ y).toString(2).split(''); //["1", "0", "1"]
-  return arr.filter(elem => elem === "1").length; //2
+const hammingDistance = (x, y) => {
+  return arr = (x ^ y)
+    .toString(2)
+    .split('') //["1", "0", "1"]
+    .filter(elem => elem === "1").length; //2
 };
-
-let result = hammingDistance(1,4);
-console.log(result);
+console.log(hammingDistance(1,4));
 ```
 
 ## Hamming Weight - (easy):
@@ -84,6 +84,23 @@ function hammingWeight(n) {
 
 console.log(hammingWeight(10));
 ```
+
+## Hamming Weight with Map:
+```js
+const hammingWeight = (n) => {
+  let num = 0;
+  let arr = (n >>> 0)
+    .toString(2)
+    .split('')
+    .map((elem, i) => {
+      (elem === '0') && num ++;
+    })
+  return arr.length - num;
+}
+
+console.log(hammingWeight(10));
+```
+
 
 ## Reverse Bits - (easy):
 ```js
