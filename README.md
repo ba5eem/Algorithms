@@ -226,6 +226,25 @@ function fizzBuzz(n) {
 console.log(fizzBuzz(15))
 ```
 
+## FizzBuzz Attempt with Map, Filter & Ternary:
+
+```js
+function fizzBuzz(n){
+  let arr = [];
+  new Array(n).fill(0).map((elem, i) => {
+    return i+1;
+  }).filter(elem => {
+    (elem % 3 !== 0) && (elem % 5 !== 0) && arr.push(elem);
+    (elem % 3 === 0) && (elem % 5 !== 0) && arr.push(elem + ': Fizz');
+    (elem % 5 === 0) && (elem % 3 !== 0) && arr.push(elem + ': Buzz');
+    (elem % 3 === 0) && (elem % 5 === 0) && arr.push(elem + ': FizzBuzz');
+  })
+  return arr;
+}
+console.log(fizzBuzz(15))
+```
+
+
 ## Smallest Divisible Number - (easy):
 
 ```js
