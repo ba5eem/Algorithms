@@ -225,7 +225,7 @@ console.log(x);
 ## Array Partition 1 - (medium):
 
 ```js
-function arrayPairSum(nums) {
+const arrayPairSum = (nums) => {
   let sum = 0;
   let i = nums.length - 1;
   nums.sort((a,b) => a-b)
@@ -241,7 +241,7 @@ console.log(arrayPairSum([1,2,3,4]))
 
 ## Reverse Words in a String - (easy):
 ```js
-function reverseWords(s) {
+const reverseWords = (str) => {
     let reversedWordArr = [];
     let x = s.split(' ');
     for(let i = 0; i < x.length; i++){
@@ -285,7 +285,7 @@ console.log(reverseWords("Let's take LeetCode contest"));
 
 ## FizzBuzz - (easy):
 ```js
-function fizzBuzz(n) {
+const fizzBuzz = (n) => {
   let arr = [];
   for(let i = 1; i < n+1; i++){
     let fizz = i % 3 === 0;
@@ -313,7 +313,7 @@ console.log(fizzBuzz(15))
 ## FizzBuzz Attempt with Map, Filter & Ternary:
 
 ```js
-function fizzBuzz(n){
+const fizzBuzz = (n) => {
   let arr = [];
   new Array(n).fill(0).map((elem, i) => {
     return i+1;
@@ -332,7 +332,7 @@ console.log(fizzBuzz(15))
 ## Smallest Divisible Number - (easy):
 
 ```js
-function smallestDivisble(n){
+const smallestDivisble = (n) => {
   for(let i = 1; i <= 100000000000; i++){
     let found = true;
     for(let j = 1; j<= n; j++){
@@ -347,4 +347,33 @@ function smallestDivisble(n){
   }
 }
 console.log(smallestDivisble(10));
+```
+
+## Find the Single Number with Reduce - (easy):
+
+```js
+const singleNumber = (nums) => {
+  let count = nums.reduce((tally, elem) => {
+    tally[elem] = (tally[elem] || 0) + 1;
+    return tally;
+  },{})
+  return Object.keys(count).reduce((a,b) => {
+    let res = count[a] < count[b] ? a : b;
+    return parseInt(res[0]);
+  });  
+};
+console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
+```
+
+## Find the Sinble Number - (easy):
+
+```js
+const singleNumber = (nums) => {
+  let result = 0;
+  for (var i=0; i<nums.length; i++) {
+    result ^= nums[i];   
+  }
+  return result;
+}
+console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
 ```
