@@ -1,8 +1,11 @@
-let singleNumber = (nums) => {
-  let result = 0;
-  for (var i=0; i<nums.length; i++) {
-    result ^= nums[i];   
-  }
-  return result;
-}
+const singleNumber = (nums) => {
+  let count = nums.reduce((tally, elem) => {
+    tally[elem] = (tally[elem] || 0) + 1;
+    return tally;
+  },{})
+  return Object.keys(count).reduce((a,b) => {
+    let res = count[a] < count[b] ? a : b;
+    return parseInt(res);
+  });  
+};
 console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
