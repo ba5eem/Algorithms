@@ -1,20 +1,22 @@
-let s = "abcd";
-let t = "abcde";
-
-var combineStrings = function(s, t) {
-  return s.split('').concat(t.split(''));
-}
-
-const findTheDifference = (s,t) => {
-  let arr = combineStrings(s,t); 
-  let count = arr.reduce((tally, elem) => {
-    tally[elem] = (tally[elem] || 0) + 1;
-    return tally;
-  },{})
-  return Object.keys(count).reduce((a,b) => {
-    let res = count[a] < count[b] ? a : b;
-    return res;
-  });  
+const dominantIndex = (nums) => {
+  let bigger;
+  let idx;
+  let biggest = Math.max(...nums);
+  let withoutBiggest = nums.filter(elem => {
+    return elem !== biggest;
+  })
+  let secondBiggest = Math.max(...withoutBiggest);
+  let doubled = secondBiggest * 2;
+    if(doubled <= biggest) { bigger = true }
+    if(bigger){
+      nums.filter((elem,i) => {
+        if(elem === biggest){ idx = i; }
+      })
+    } else{ idx = -1; }
+  return idx; 
 };
-console.log(findTheDifference(s,t));
+console.log(dominantIndex([3, 6, 1, 0]))
+
+
+
 
