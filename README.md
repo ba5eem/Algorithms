@@ -377,3 +377,31 @@ const singleNumber = (nums) => {
 }
 console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
 ```
+
+## Largest Number At Least Twice of Others - (easy):
+
+```js
+var dominantIndex = function(nums) {
+  let bigger;
+  let idx;
+  let x = Math.max(...nums);
+  let without = nums.filter(elem => {
+    return elem !== x;
+  })
+  let y = Math.max(...without);
+    if((y*2)<=x){
+      bigger = true;
+     }
+    if(bigger){
+      nums.filter((elem,i) => {
+        if(elem === x){
+          idx = i;
+        }
+      })
+    }
+  else{
+    idx = -1;
+  }
+  return idx; 
+};
+```
