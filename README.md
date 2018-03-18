@@ -17,7 +17,7 @@ function factorialize(num) {
   if(num === 0){
     return 1;
   }
-  for(var i = num-1; i >= 1; i--){
+  for(let i = num-1; i >= 1; i--){
     num *=i;
   }
   return num;
@@ -95,7 +95,7 @@ function hammingWeight(n) {
     let arr = str.split('');
       console.log(arr); //[ '1', '0', '1', '0' ]
     let num = 0;
-    for(var i = 0; i < arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
       if(arr[i] === '0'){
         num ++;
       }
@@ -128,7 +128,7 @@ console.log(hammingWeight(10));
 function reverseBits(n) {
   let reversed = 0;
   let last;
-  for(var i = 0; i < 32; i++){
+  for(let i = 0; i < 32; i++){
     last = n & 1;
     n >>= 1;
     reversed <<=1;
@@ -370,7 +370,7 @@ console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
 ```js
 const singleNumber = (nums) => {
   let result = 0;
-  for (var i=0; i<nums.length; i++) {
+  for (let i=0; i<nums.length; i++) {
     result ^= nums[i];   
   }
   return result;
