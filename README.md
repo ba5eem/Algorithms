@@ -4,7 +4,7 @@ Code Examples for Algorithms
 ## Reverse a String - (easy):
 
 ```js
-function reverseString(str) {
+const reverseString = (str) => {
   return str.split("").reverse().join("");
 }
 reverseString("hello");
@@ -13,7 +13,7 @@ reverseString("hello");
 ## Factorialize a Number - (easy):
 
 ```js
-function factorialize(num) {
+const factorialize = (num) => {
   if(num === 0){
     return 1;
   }
