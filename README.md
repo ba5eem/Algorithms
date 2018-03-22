@@ -28,7 +28,7 @@ factorialize(5);
 ## Check for Palindromes - (easy):
 
 ```js
-function palindrome(str) {
+const palindrome = (str) => {
   let removeEmptyChar = /[\W_]/g;
   let lowCaseStr = str.toLowerCase().replace(removeEmptyChar, '');
   let reverseStr = lowCaseStr.split('').reverse().join(''); 
@@ -40,7 +40,7 @@ palindrome("racecar");
 ## Find the Longest Word in a String - (easy):
 
 ```js
-function findLongestWord(str) {
+const findLongestWord = (str) => {
   let arr = str.split(' ');
   let n = 0;
   for(let i = 0; i < arr.length; i++){
