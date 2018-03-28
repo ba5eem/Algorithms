@@ -1,15 +1,13 @@
-const hammingWeight = (n) => {
-    let str = (n >>> 0).toString(2)
-      console.log(str); //1010
-    let arr = str.split('');
-      console.log(arr); //[ '1', '0', '1', '0' ]
-    let num = 0;
-    for(let i = 0; i < arr.length; i++){
-      if(arr[i] === '0'){
-        num ++;
-      }
-    }
-    return arr.length - num;
-};
+const reverseBits = (bits,n) => {
+  let reversed = 0;
+  let last;
+  new Array(bits).fill(0).map(() => {
+    last = n & 1;
+    n >>= 1;
+    reversed <<=1;
+    reversed += last;
+  })
+  return reversed >>> 0;
+}
 
-console.log(hammingWeight(10));
+console.log(reverseBits(32, 964176192)); // 43261596
