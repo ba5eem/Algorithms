@@ -31,7 +31,7 @@ factorialize(5);
 const palindrome = (str) => {
   let removeEmptyChar = /[\W_]/g;
   let lowCaseStr = str.toLowerCase().replace(removeEmptyChar, '');
-  let reverseStr = lowCaseStr.split('').reverse().join(''); 
+  let reverseStr = lowCaseStr.split('').reverse().join('');
   return reverseStr === lowCaseStr;
 }
 palindrome("racecar");
@@ -46,7 +46,7 @@ const findLongestWord = (str) => {
   for(let i = 0; i < arr.length; i++){
     if(n < arr[i].length){
       n = arr[i].length;
-    } 
+    }
   }
   return n;
 }
@@ -296,7 +296,7 @@ const fizzBuzz = (n) => {
     else if(buzz){
       arr.push('Buzz');
     }
-    
+
     else if(fizz){
       arr.push('Fizz');
     }
@@ -304,7 +304,7 @@ const fizzBuzz = (n) => {
       arr.push(i.toString());
     }
   }
-  return arr;   
+  return arr;
 };
 
 console.log(fizzBuzz(15))
@@ -360,18 +360,18 @@ const singleNumber = (nums) => {
   return Object.keys(count).reduce((a,b) => {
     let res = count[a] < count[b] ? a : b;
     return parseInt(res);
-  });  
+  });
 };
 console.log(singleNumber([2,2,2,2,2,2,2,2,2,2,1]));
 ```
 
-## Find the Sinble Number - (easy):
+## Find the Single Number - (easy):
 
 ```js
 const singleNumber = (nums) => {
   let result = 0;
   for (let i=0; i<nums.length; i++) {
-    result ^= nums[i];   
+    result ^= nums[i];
   }
   return result;
 }
@@ -396,7 +396,37 @@ const dominantIndex = (nums) => {
         if(elem === biggest){ idx = i; }
       })
     } else{ idx = -1; }
-  return idx; 
+  return idx;
 };
 console.log(dominantIndex([3, 6, 1, 0]))
+```
+## Find the lat/lng coords 100m from current location
+
+```js
+let geo = {
+        bearing : function (lat1,lng1,lat2,lng2) {
+            let dLon = this._toRad(lng2-lng1);
+            let y = Math.sin(dLon) * Math.cos(this._toRad(lat2));
+            let x = Math.cos(this._toRad(lat1))*Math.sin(this._toRad(lat2)) - Math.sin(this._toRad(lat1))*Math.cos(this._toRad(lat2))*Math.cos(dLon);
+            let brng = this._toDeg(Math.atan2(y, x));
+            return ((brng + 360) % 360);
+        },
+        _toRad : function(deg) {
+             return deg * Math.PI / 180;
+        },
+        _toDeg : function(rad) {
+            return rad * 180 / Math.PI;
+        },
+        _makeCompass: function (northInMeters,eastInMeters,observer) {
+          let R=6378137;
+          let dLat = northInMeters/R;
+          let dLon = eastInMeters/(R*Math.cos(Math.PI*observer.lat/180));
+          let lat = observer.lat + dLat * 180/Math.PI;
+          let lon = observer.lon + dLon * 180/Math.PI;
+          return {lat: lat, lon: lon };
+        }
+    };
+let compass = {
+  N: geo._makeCompass(100,0,your_location),
+};
 ```
