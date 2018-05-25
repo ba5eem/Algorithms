@@ -431,3 +431,12 @@ let compass = {
 };
 console.log(compass);
 ```
+
+## Convert Compass number to Compass String
+
+```js
+const toCompass = (degrees) => {
+  return ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'][Math.round(degrees / 11.25 / 2)];
+}
+```
+
