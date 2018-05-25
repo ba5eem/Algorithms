@@ -429,4 +429,5 @@ let geo = {
 let compass = {
   N: geo._makeCompass(100,0,your_location),
 };
+console.log(compass);
 ```
