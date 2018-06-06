@@ -3,6 +3,36 @@ Code Examples for Algorithms
 
 ## Index
 <b>[Reverse A String](https://github.com/ba5eem/Algorithms#reverse-a-string---easy) </b>
+<b>[Factorialize a Number](https://github.com/ba5eem/Algorithms#factorialize-a-number---easy) </b>
+<b>[Check for Palindromes](https://github.com/ba5eem/Algorithms#check-for-palindromes---easy) </b>
+<b>[Find the Longest Word in a String](https://github.com/ba5eem/Algorithms#find-the-longest-word-in-a-string---easy) </b>
+<b>[Hamming Distance](https://github.com/ba5eem/Algorithms#hamming-distance---easy) </b>
+<b>[Hamming Weight](https://github.com/ba5eem/Algorithms#hamming-weight-with-map) </b>
+<b>[Reverse Bits](https://github.com/ba5eem/Algorithms#reverse-bits---with-map) </b>
+<b>[Rotate String](https://github.com/ba5eem/Algorithms#rotate-string---easy) </b>
+<b>[Self Dividing Number](https://github.com/ba5eem/Algorithms#array-partition-1---medium) </b>
+<b>[Array Partition 1](https://github.com/ba5eem/Algorithms#array-partition-1---medium) </b>
+<b>[Reverse Words in a String](https://github.com/ba5eem/Algorithms#reverse-words-in-a-string-with-reduce) </b>
+<b>[FizzBuzz](https://github.com/ba5eem/Algorithms#fizzbuzz-attempt-with-map-filter--ternary) </b>
+<b>[Smallest Divisible Number](https://github.com/ba5eem/Algorithms#smallest-divisible-number---easy) </b>
+<b>[Find the Single Number](https://github.com/ba5eem/Algorithms#find-the-single-number---easy) </b>
+<b>[Largest Number At Least Twice of Others](https://github.com/ba5eem/Algorithms#largest-number-at-least-twice-of-others---easy) </b>
+<b>[Find the lat/lng coords 100m from current location](https://github.com/ba5eem/Algorithms#find-the-latlng-coords-100m-from-current-location) </b>
+<b>[Convert Compass number to Compass String](https://github.com/ba5eem/Algorithms#convert-compass-number-to-compass-string) </b>
+<b>[Check Ascending Order](https://github.com/ba5eem/Algorithms#check-ascending-order) </b>
+<b>[Cookie Problem](https://github.com/ba5eem/Algorithms#cookie-problem) </b>
+<b>[Count By Multiples](https://github.com/ba5eem/Algorithms#count-by-multiples) </b>
+<b>[Descending Order](https://github.com/ba5eem/Algorithms#descending-order) </b>
+<b>[Double String Characters](https://github.com/ba5eem/Algorithms#double-string-characters) </b>
+<b>[Find the Longest Word](https://github.com/ba5eem/Algorithms#find-the-longest-word) </b>
+<b>[Find the Stray Value](https://github.com/ba5eem/Algorithms#find-the-stray-value) </b>
+<b>[Find the Unique Number](https://github.com/ba5eem/Algorithms#find-the-unique-number) </b>
+<b>[How Many Litres](https://github.com/ba5eem/Algorithms#how-many-litres) </b>
+<b>[Move the Zeros](https://github.com/ba5eem/Algorithms#move-the-zeros) </b>
+<b>[Needle in the Haystack](https://github.com/ba5eem/Algorithms#needle-in-the-haystack) </b>
+<b>[Swap Letter Case](https://github.com/ba5eem/Algorithms#swap-letter-case) </b>
+<b>[Vowel Count](https://github.com/ba5eem/Algorithms#vowel-count) </b>
+
 
 ## Reverse a String - (easy):
 
@@ -242,7 +272,7 @@ const arrayPairSum = (nums) => {
 console.log(arrayPairSum([1,2,3,4]))
 ```
 
-## Reverse Words in a String - (easy):
+## everse Words in a StringR - (easy):
 ```js
 const reverseWords = (str) => {
     let reversedWordArr = [];
