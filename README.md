@@ -453,3 +453,22 @@ function checkAscOrder(arr) {
 }
 ```
 
+## Cookie Problem
+
+```js
+function cookieProblem(array) {
+  let max = array.sort()[array.length-1];
+  // sort array then choose last # of array
+  let sum = array.map(n => {
+    // map every elem in array and subtract the max with each elem and return it in an array
+    return max-n;
+  },[]);
+  return sum.reduce((acc,val) => {
+    // sum all values in array to get total result
+    return acc + val;
+  })
+};
+```
+
+
+
