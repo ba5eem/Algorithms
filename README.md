@@ -1,6 +1,9 @@
 ## Algorithms
 Code Examples for Algorithms
 
+## Index
+Reverse A String(https://github.com/ba5eem/Algorithms#reverse-a-string---easy)
+
 ## Reverse a String - (easy):
 
 ```js
