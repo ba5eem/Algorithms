@@ -521,3 +521,20 @@ function doubleStrChars(str) {
 }
 ```
 
+## Find the Longest Word
+
+```js
+function findTheLongestWord(str) {
+  let arr = [];
+  let res = str.map((elem,i) => {
+    // return length of every word into an array
+    return elem.length;
+  },[]);
+  // find biggest value of array
+  let max = Math.max(...res);
+  // find index in array with that max
+  let idx = res.indexOf(max);
+  return str[idx];
+}
+```
+
