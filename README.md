@@ -499,5 +499,25 @@ function descendingOrder(number) {
 }
 ```
 
-##
+## Double String Characters
+
+```js
+function doubleStrChars(str) {
+  // write your code in here
+  if(typeof(str) === 'number'){
+    return 'not a string!';
+  }
+  else if(typeof(str) === "boolean"){
+    return 'not a string!';
+  }
+  else if(str === undefined){
+    return 'not a string!';
+  }
+  return str
+    .split('')
+    .reduce(function (res, current, index, array) {
+      return res.concat([current, current]);
+    }, []).join('');
+}
+```
 
