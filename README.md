@@ -2,7 +2,7 @@
 Code Examples for Algorithms
 
 ## Index
-Reverse A String(https://github.com/ba5eem/Algorithms#reverse-a-string---easy)
+<b> Reverse A String - [Reverse A String](https://github.com/ba5eem/Algorithms#reverse-a-string---easy) | </b>
 
 ## Reverse a String - (easy):
 
