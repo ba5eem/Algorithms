@@ -588,3 +588,17 @@ function moveTheZeros(arr, bool) {
   }
 }
 ```
+
+## Needle in the Haystack
+
+```js
+function needleInHaystack(haystack) {
+  let x = haystack.indexOf('needle');
+  if(x === -1){
+    return false;
+  }
+  else{
+    return x;
+  }
+}
+```
