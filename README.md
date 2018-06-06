@@ -538,3 +538,14 @@ function findTheLongestWord(str) {
 }
 ```
 
+## Find the Stray Value
+
+```js
+function findTheStrayValue(arr) {
+  // write your code in here
+  return arr.filter((value) => {
+    return arr.indexOf(value) === arr.lastIndexOf(value);
+  })[0] || -1;
+}
+```
+
