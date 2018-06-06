@@ -602,3 +602,18 @@ function needleInHaystack(haystack) {
   }
 }
 ```
+
+## Swap Letter Case
+
+```js
+function swapLetterCase(str) {
+  return str.split('').map(elem => {
+    if(elem === elem.toUpperCase()){
+      return elem.toLowerCase();
+    }
+    else if(elem === elem.toLowerCase()){
+      return elem.toUpperCase();
+    }
+  },[]).join('');
+}
+```
