@@ -485,5 +485,19 @@ function countByMultiples(length, x) {
 }
 ```
 
+## Descending Order
 
+```js
+function descendingOrder(number) {
+  if(typeof number !== 'number'){
+    return 'not a number!';
+  }
+  else{
+   return parseFloat(number.toString().split('').sort().reverse().join(''));
+  }
+
+}
+```
+
+##
 
