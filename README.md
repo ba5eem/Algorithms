@@ -617,3 +617,18 @@ function swapLetterCase(str) {
   },[]).join('');
 }
 ```
+
+## Vowel Count
+
+```js
+function vowelCount(str) {
+  let x = str.match(/[aeiou]/gi);
+  // regex lookup for all vowels
+  if(x === null){
+    return 0;
+  }
+  else{
+    return x.join('').length;
+  }
+}
+```
