@@ -503,7 +503,6 @@ function descendingOrder(number) {
 
 ```js
 function doubleStrChars(str) {
-  // write your code in here
   if(typeof(str) === 'number'){
     return 'not a string!';
   }
@@ -542,7 +541,6 @@ function findTheLongestWord(str) {
 
 ```js
 function findTheStrayValue(arr) {
-  // write your code in here
   return arr.filter((value) => {
     return arr.indexOf(value) === arr.lastIndexOf(value);
   })[0] || -1;
@@ -553,7 +551,6 @@ function findTheStrayValue(arr) {
 
 ```js
 function findUniqueNum(x) {
-  // write your code in here
   let y = x.split(' ');
   let idx;
   let res = y.map((elem,i) => {
@@ -563,5 +560,13 @@ function findUniqueNum(x) {
   })
   return idx;
 };
+```
+
+## How Many Litres
+
+```js
+function howManyLitres(hours) {
+  return Math.floor((hours*0.5));
+}
 ```
 
