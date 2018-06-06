@@ -570,3 +570,21 @@ function howManyLitres(hours) {
 }
 ```
 
+## Move the Zeros
+
+```js
+function moveTheZeros(arr, bool) {
+  let without = arr.filter(elem => {
+    return elem !== 0;
+  });
+  let withZ = arr.filter(elem => {
+    return elem === 0;
+  });
+  if(bool){
+    return [...without,...withZ]
+  }
+  else{
+    return [...withZ,...without]
+  }
+}
+```
