@@ -549,3 +549,19 @@ function findTheStrayValue(arr) {
 }
 ```
 
+## Find the Unique Number
+
+```js
+function findUniqueNum(x) {
+  // write your code in here
+  let y = x.split(' ');
+  let idx;
+  let res = y.map((elem,i) => {
+    if(elem % 2 !== 0){
+      idx = i;
+      }
+  })
+  return idx;
+};
+```
+
