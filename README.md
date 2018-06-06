@@ -470,5 +470,20 @@ function cookieProblem(array) {
 };
 ```
 
+## Count By Multiples
+
+```js
+function countByMultiples(length, x) {
+  let arr = []; // set empty array
+  for(let i = 1; i < 1000; i++){
+    // loop through 1 -> 1000
+    // check if modulous of x number push this into the array
+    (i % x === 0) && arr.push(i);
+  }
+  // use slice to only return array of length given
+  return arr.slice(0,length);
+}
+```
+
 
 
