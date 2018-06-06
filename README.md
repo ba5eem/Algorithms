@@ -440,3 +440,16 @@ const toCompass = (degrees) => {
 }
 ```
 
+## Check Ascending Order
+
+```js
+function checkAscOrder(arr) {
+  return arr.every((val, i, arr) => {
+    //console.log(val) // every # in array
+    //console.log(i) // index
+    //console.log(arr) // whole array
+    return !i || (val >= arr[i - 1]);
+  });
+}
+```
+
