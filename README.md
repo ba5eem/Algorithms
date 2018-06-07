@@ -675,3 +675,11 @@ function findMiddleValue(arr) {
   return arr.indexOf(midVal);
 }
 ```
+
+## Half Life
+
+```js
+function halfLife(initialQuantity, quantityRemaining, time) {
+  return time / Math.log2(initialQuantity / quantityRemaining);
+}
+```
