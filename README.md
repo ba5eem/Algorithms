@@ -32,6 +32,7 @@ Code Examples for Algorithms
 <b>[Needle in the Haystack](https://github.com/ba5eem/Algorithms#needle-in-the-haystack) </b> |
 <b>[Swap Letter Case](https://github.com/ba5eem/Algorithms#swap-letter-case) </b> |
 <b>[Vowel Count](https://github.com/ba5eem/Algorithms#vowel-count) </b> |
+<b>[Find Middle Value](https://github.com/ba5eem/Algorithms#find-middle-value) </b> |
 
 
 ## Reverse a String - (easy):
@@ -663,5 +664,14 @@ function vowelCount(str) {
   else{
     return x.join('').length;
   }
+}
+```
+
+## Find Middle Value
+
+```js
+function findMiddleValue(arr) {
+  let midVal = new Array(arr[0],arr[1],arr[2]).sort((a,b) => a - b)[1];
+  return arr.indexOf(midVal);
 }
 ```
