@@ -33,7 +33,8 @@ Code Examples for Algorithms
 <b>[Swap Letter Case](https://github.com/ba5eem/Algorithms#swap-letter-case) </b> |
 <b>[Vowel Count](https://github.com/ba5eem/Algorithms#vowel-count) </b> |
 <b>[Find Middle Value](https://github.com/ba5eem/Algorithms#find-middle-value) </b> |
-
+<b>[Return Prime Numbers from Array](https://github.com/ba5eem/Algorithms#return-prime-numbers-from-array) </b> |
+<b>[Return Duplicates from Array](https://github.com/ba5eem/Algorithms#return-duplicates-from-array) </b> |
 
 ## Reverse a String - (easy):
 
