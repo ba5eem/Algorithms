@@ -708,3 +708,21 @@ for(var i = 0; i < arr.length; i++){
 
 console.log(primeNumbersArr);
 ```
+
+## Return Duplicates from Array
+
+```js
+let arr = [2,2,5,10,8,10,3,5];
+
+var sorted_arr = arr.sort();
+console.log(sorted_arr);
+
+var results = [];
+for (var i = 0; i < sorted_arr.length - 1; i++) {
+    if (sorted_arr[i + 1] == sorted_arr[i]) {
+        results.push(sorted_arr[i]);
+    }
+}
+
+console.log(results);
+```
