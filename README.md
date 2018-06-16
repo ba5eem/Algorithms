@@ -683,3 +683,28 @@ function halfLife(initialQuantity, quantityRemaining, time) {
   return time / Math.log2(initialQuantity / quantityRemaining);
 }
 ```
+
+## Return Prime Numbers from Array
+
+```js
+let arr = [2,2,5,10,8,10,3,5,11,17];
+
+let primeNumbersArr = [];
+
+function isPrime(value) {
+    for(var i = 2; i < value; i++) {
+        if(value % i === 0) {
+            return false;
+        }
+    }
+    return value > 1;
+}
+
+for(var i = 0; i < arr.length; i++){
+  if(isPrime(arr[i])){
+    primeNumbersArr.push(arr[i]);
+  }
+}
+
+console.log(primeNumbersArr);
+```
